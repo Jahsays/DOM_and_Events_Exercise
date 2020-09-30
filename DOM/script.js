@@ -20,7 +20,7 @@ var newLi = document.createElement("li");
 // Give the li the text "four".
 newLi.innerText = "four";
 // Append the li to the ul element.
-var ul = getElementById("ul");
+var ul = document.querySelector("ul");
 ul.appendChild(newLi);
 // Loop over all of the lis inside the ol tag and give them a background color of "green".
 var ol = document.querySelectorAll("ol");
@@ -29,6 +29,7 @@ for (var i = 0; i < ol.length; i++) {
 }
 
 // Remove the div with a class of footer.
-var footer = document.getElementsByClassName("footer");
-    footer.removeChild();
+var body = document.querySelector('body');
+var footer = document.querySelector(".footer");
+    body.removeChild(footer);
 

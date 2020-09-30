@@ -21,4 +21,4 @@ var newDiv = document.createElement("div");
 newDiv.className = "Purple"
 
 // Append your new div to the page to the section tag.
-section.apppendChild(newDiv)
+section.appendChild(newDiv)

@@ -22,3 +22,34 @@ newDiv.className = "Purple"
 
 // Append your new div to the page to the section tag.
 section.appendChild(newDiv)
+
+
+// Part 2
+var startRace = document.querySelector('button');
+
+startRace = addEventListener('click', () => {
+    var pageWidth = document.body.offsetWidth;
+
+    let carMovement = [{transform: `translate(${pageWidth-50}px,0)`}];
+    
+    let car1Speed = Math.floor(Math.random() * (3500 - 3000 + 1)) + 4000;
+    let car2Speed = Math.floor(Math.random() * (3500 - 3000 + 1)) + 4000;
+
+    document.querySelector(".car1").animate(
+        carMovement,
+        {duration: car1Speed}
+    );
+     
+    document.querySelector(".car2").animate(
+        carMovement,
+        {duration: car2Speed}
+    );
+    
+    setTimeout(()=> {
+        if (car1Speed < car2Speed) {
+            alert ("Car 1 WINS");
+        }else{
+            alert("Car 2 WINS")
+        }
+    },4500)
+});
